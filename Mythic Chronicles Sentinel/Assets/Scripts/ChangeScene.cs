@@ -14,5 +14,6 @@ public class ChangeScene : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+        PlayerPrefs.SetInt("Music Volume Changed", 0);
     }
 }
