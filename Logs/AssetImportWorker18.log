@@ -1,0 +1,507 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.29f1 (204d6dc9ae1c) revision 2116973'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'zh' Physical Memory: 32429 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\unity\2021.3.29f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker18
+-projectPath
+C:/Users/lny/Desktop/COMP602/Mythics ()1)
+-logFile
+Logs/AssetImportWorker18.log
+-srvPort
+49669
+Successfully changed project path to: C:/Users/lny/Desktop/COMP602/Mythics ()1)
+C:/Users/lny/Desktop/COMP602/Mythics ()1)
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [16196] Host "[IP] 192.168.1.228 [Port] 0 [Flags] 2 [Guid] 58706125 [EditorId] 58706125 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UVGHRJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [16196] Host "[IP] 192.168.1.228 [Port] 0 [Flags] 2 [Guid] 58706125 [EditorId] 58706125 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UVGHRJR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 171.35 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.29f1 (204d6dc9ae1c)
+[Subsystems] Discovering subsystems at path C:/unity/2021.3.29f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/lny/Desktop/COMP602/Mythics ()1)/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 Laptop GPU (ID=0x24dc)
+    Vendor:   NVIDIA
+    VRAM:     16191 MB
+    Driver:   31.0.15.3699
+Initialize mono
+Mono path[0] = 'C:/unity/2021.3.29f1/Editor/Data/Managed'
+Mono path[1] = 'C:/unity/2021.3.29f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/unity/2021.3.29f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/unity/2021.3.29f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012597 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 114.56 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.973 seconds
+Domain Reload Profiling:
+	ReloadAssembly (973ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (663ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (163ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (394ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (115ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (190ms)
+				ProcessInitializeOnLoadMethodAttributes (75ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.016092 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 148.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.921 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1922ms)
+		BeginReloadAssembly (207ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (1503ms)
+			LoadAssemblies (167ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (393ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (826ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (149ms)
+				BeforeProcessingInitializeOnLoad (187ms)
+				ProcessInitializeOnLoadAttributes (363ms)
+				ProcessInitializeOnLoadMethodAttributes (96ms)
+				AfterProcessingInitializeOnLoad (22ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3798 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (46.7 KB). Loaded Objects now: 4258.
+Memory consumption went from 144.5 MB to 144.5 MB.
+Total: 3.958300 ms (FindLiveObjects: 0.421200 ms CreateObjectMapping: 0.306100 ms MarkObjects: 3.125900 ms  DeleteObjects: 0.103300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1453525.220474 seconds.
+  path: Assets/Controllers/PoisonIdle_0024_Layer-46.png
+  artifactKey: Guid(ce9cc0d63a7b2d148be0bd07c5326934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0024_Layer-46.png using Guid(ce9cc0d63a7b2d148be0bd07c5326934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e820a7fabe0228935ac0bb4b7208dc7') in 0.266302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Controllers/PoisonIdle_0032_Layer-38.png
+  artifactKey: Guid(1aaf41bba49e85747a871ccd2fdc6638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0032_Layer-38.png using Guid(1aaf41bba49e85747a871ccd2fdc6638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6bcdcb80d123054b0bcdd66bb224c43') in 0.055822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Controllers/PoisonIdle_0034_Layer-36.png
+  artifactKey: Guid(8f76288050d7b9d4dbe35c32290463d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0034_Layer-36.png using Guid(8f76288050d7b9d4dbe35c32290463d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f924fb6c849dd86058861b96a258eb02') in 0.054284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Controllers/StormIdle_0000s_0010_Layer-145.png
+  artifactKey: Guid(4848dc252ee45124c804556d67bfd99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/StormIdle_0000s_0010_Layer-145.png using Guid(4848dc252ee45124c804556d67bfd99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7741823c9e771fb167438ac77404cbdc') in 0.050435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Controllers/StormIdle_0000s_0011_Layer-144.png
+  artifactKey: Guid(9b1800fbcb085f348b7f6af0c2ed9d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/StormIdle_0000s_0011_Layer-144.png using Guid(9b1800fbcb085f348b7f6af0c2ed9d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6dbef7b6d9e93a29f9ba16770740cf') in 0.051125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Controllers/PoisonIdle_0041_Layer-29.png
+  artifactKey: Guid(e4d3f4fce7497cd4aac72d8535c0fb67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0041_Layer-29.png using Guid(e4d3f4fce7497cd4aac72d8535c0fb67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7d5753aa8d1adadb7cd4e00071bc74d') in 0.049413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Controllers/PoisonIdle_0042_Layer-28.png
+  artifactKey: Guid(c2c1b95c367eeaa41a98b95755e99d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0042_Layer-28.png using Guid(c2c1b95c367eeaa41a98b95755e99d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28df5cad566013998dfdd06fe3fb16fc') in 0.050899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Controllers/StormIdle_0000s_0005_Layer-150.png
+  artifactKey: Guid(6059225eaae9c3c4fa8e6025cbe5740c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/StormIdle_0000s_0005_Layer-150.png using Guid(6059225eaae9c3c4fa8e6025cbe5740c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74e820a7be2799ace2a8beab6145fe51') in 0.060922 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016953 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.574 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1575ms)
+		BeginReloadAssembly (289ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (1090ms)
+			LoadAssemblies (195ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (344ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (472ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (108ms)
+				ProcessInitializeOnLoadAttributes (246ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
+				AfterProcessingInitializeOnLoad (26ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.17 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (22.0 KB). Loaded Objects now: 4268.
+Memory consumption went from 147.7 MB to 147.7 MB.
+Total: 4.446900 ms (FindLiveObjects: 0.397700 ms CreateObjectMapping: 0.119000 ms MarkObjects: 3.889700 ms  DeleteObjects: 0.038800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 95.155414 seconds.
+  path: Assets/Controllers/PoisonIdle_0024_Layer-46.png
+  artifactKey: Guid(ce9cc0d63a7b2d148be0bd07c5326934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0024_Layer-46.png using Guid(ce9cc0d63a7b2d148be0bd07c5326934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9bf01ce6aabf7298e4e241e08ad749a') in 0.112751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.113212 seconds.
+  path: Assets/Controllers/PoisonIdle_0011_Layer-59.png
+  artifactKey: Guid(c099fb4a6c0688640a477c5f40432bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0011_Layer-59.png using Guid(c099fb4a6c0688640a477c5f40432bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4be3c6954a8c0e6c12573c8294ffda') in 0.040803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Controllers/PoisonIdle_0008_Layer-62.png
+  artifactKey: Guid(3a1365b698ebc314c9037deeabb8a92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0008_Layer-62.png using Guid(3a1365b698ebc314c9037deeabb8a92f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc886d302b0bcb3adfa282617f1616cc') in 0.055376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Controllers/PoisonIdle_0007_Layer-63.png
+  artifactKey: Guid(8159671336614bc449562fecab962337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0007_Layer-63.png using Guid(8159671336614bc449562fecab962337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9196670d206edfddefdbcd9c345b3d9f') in 0.046246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0019_Layer-121.png
+  artifactKey: Guid(9abc47ed6fb1dad47bab990b11241f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0019_Layer-121.png using Guid(9abc47ed6fb1dad47bab990b11241f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29132a484be304131e8ac260f8dc02bc') in 0.050525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0008_Layer-132.png
+  artifactKey: Guid(2e00d3d70fb64b9459216e7b967d66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0008_Layer-132.png using Guid(2e00d3d70fb64b9459216e7b967d66d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '062ebe1c031007ea1a9b44a037d3b3fb') in 0.040014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Controllers/PoisonIdle_0013_Layer-57.png
+  artifactKey: Guid(be48d88302b558647820801154e21521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0013_Layer-57.png using Guid(be48d88302b558647820801154e21521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '312a1d4796cfeefc32c4a6b7d32f6938') in 0.045852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0022_Layer-118.png
+  artifactKey: Guid(396a729b361a86d4481ed03a7dd0768d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0022_Layer-118.png using Guid(396a729b361a86d4481ed03a7dd0768d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2ad78309e6eaf43bfbf4b0a9a8a5f3') in 0.047461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Controllers/PoisonIdle_0000_Layer-70.png
+  artifactKey: Guid(55521459ce614844398e459e7cf7299e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0000_Layer-70.png using Guid(55521459ce614844398e459e7cf7299e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843685cea41d9679543cf789a8c482fd') in 0.048930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0021_Layer-119.png
+  artifactKey: Guid(0bbae7c7360efc640bb3ba545383b0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0021_Layer-119.png using Guid(0bbae7c7360efc640bb3ba545383b0fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71907c5695f5fd9d0cd71b494cd9cdb2') in 0.047839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0031_Layer-109.png
+  artifactKey: Guid(aa095f562b0e11a4d9a12eaa495281e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0031_Layer-109.png using Guid(aa095f562b0e11a4d9a12eaa495281e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb805e62d9f5e6ec9989c9577e83f36') in 0.039784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0007_Layer-133.png
+  artifactKey: Guid(5c7f076e54d7c8b4ab1469b58d52535a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0007_Layer-133.png using Guid(5c7f076e54d7c8b4ab1469b58d52535a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ac818b4b3555e665917f1f9afbd969') in 0.041578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0018_Layer-122.png
+  artifactKey: Guid(a471ea753c3682c4f9673235cebaf834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0018_Layer-122.png using Guid(a471ea753c3682c4f9673235cebaf834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '897b6e80a2b3634a44744d0bd001f5c5') in 0.044942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0025_Layer-115.png
+  artifactKey: Guid(0223e726e9138bf46a9baa3037fbbaa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0025_Layer-115.png using Guid(0223e726e9138bf46a9baa3037fbbaa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a324a6040d8b12f03357d4fa367d474') in 0.053440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Controllers/PoisonIdle_0002_Layer-68.png
+  artifactKey: Guid(8eeeb4386fd2db64a83a0255627d482a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0002_Layer-68.png using Guid(8eeeb4386fd2db64a83a0255627d482a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bbd106bcfebae5a593031f33e5dcb5c') in 0.044649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Controllers/PoisonIdle_0004_Layer-66.png
+  artifactKey: Guid(c875e496e87cae3439c1c07d66930a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0004_Layer-66.png using Guid(c875e496e87cae3439c1c07d66930a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f5c5ad7db22160a0ce700cb6ffe78e') in 0.047801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0028_Layer-112.png
+  artifactKey: Guid(66cd7f8e4f1a0044bbb4d265d7455505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0028_Layer-112.png using Guid(66cd7f8e4f1a0044bbb4d265d7455505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91dfbc13fb32b8eeb3cb9e83f2ca41b') in 0.049024 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0014_Layer-126.png
+  artifactKey: Guid(8a0e5658a0feb3a428312a9542d6ef64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0014_Layer-126.png using Guid(8a0e5658a0feb3a428312a9542d6ef64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2849927d90f8953a25a4038bed5bb3e') in 0.053190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0033_Layer-107.png
+  artifactKey: Guid(24178d2aa697bdc4b8b76cd3ee8ac246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0033_Layer-107.png using Guid(24178d2aa697bdc4b8b76cd3ee8ac246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1166a7267030334b3e95bc3798395a31') in 0.054561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0009_Layer-131.png
+  artifactKey: Guid(b4e4df1e9bf2e264c9fbf821abdb29d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0009_Layer-131.png using Guid(b4e4df1e9bf2e264c9fbf821abdb29d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf6d3a1b2e729f3e50585bc8491e413') in 0.048921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Controllers/PoisonIdle_0017_Layer-53.png
+  artifactKey: Guid(4bd8953e68fa0034687ed92a49d5c419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0017_Layer-53.png using Guid(4bd8953e68fa0034687ed92a49d5c419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3edeb2a99fd71dba877bf0816363e241') in 0.053183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0026_Layer-114.png
+  artifactKey: Guid(8350c5cc060e94847a255449a13b7794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0026_Layer-114.png using Guid(8350c5cc060e94847a255449a13b7794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38200191e9f73a86c2491caac4e2e46') in 0.051919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0010_Layer-130.png
+  artifactKey: Guid(6f0df60fcf85de14097dca4f3e908221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0010_Layer-130.png using Guid(6f0df60fcf85de14097dca4f3e908221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da849f0b49957f090cb07007ace62c0') in 0.052933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Controllers/PoisonIdle_0006_Layer-64.png
+  artifactKey: Guid(fbf4f032b3521e04f91882383298a986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0006_Layer-64.png using Guid(fbf4f032b3521e04f91882383298a986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ae1b6e08058655d14b4193b03a9cd21') in 0.091780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0015_Layer-125.png
+  artifactKey: Guid(6106ed0e8806b8f4a9a2781569d3f9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0015_Layer-125.png using Guid(6106ed0e8806b8f4a9a2781569d3f9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f5efb1647be8309a95b8f771839863') in 0.058588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Controllers/PoisonIdle_0016_Layer-54.png
+  artifactKey: Guid(4492ceeb626cc804581e9c631dd2340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0016_Layer-54.png using Guid(4492ceeb626cc804581e9c631dd2340b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9614fdf2172f47fe0b4da450add79153') in 0.054549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0029_Layer-111.png
+  artifactKey: Guid(a05589e4593bfc94fa6530a5fb7a6e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0029_Layer-111.png using Guid(a05589e4593bfc94fa6530a5fb7a6e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b57345ebebdb01defd3b777a34dc3e8') in 0.054047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Controllers/PoisonIdle_0018_Layer-52.png
+  artifactKey: Guid(e72d846421370764d8eeb9b5fd34f4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/PoisonIdle_0018_Layer-52.png using Guid(e72d846421370764d8eeb9b5fd34f4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bbbb79ab301183578f16fd31c31843') in 0.057915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Controllers/IceIdle_0000s_0020_Layer-120.png
+  artifactKey: Guid(e501542f8a4c50c45bde1391c188007f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controllers/IceIdle_0000s_0020_Layer-120.png using Guid(e501542f8a4c50c45bde1391c188007f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3e029a81130ace72fa9b257b85c3173') in 0.056166 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018128 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\lny\Desktop\COMP602\Mythics ()1)\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.548 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1549ms)
+		BeginReloadAssembly (252ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1122ms)
+			LoadAssemblies (194ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (501ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (280ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
+				AfterProcessingInitializeOnLoad (26ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (22.1 KB). Loaded Objects now: 4271.
+Memory consumption went from 147.8 MB to 147.8 MB.
+Total: 3.510600 ms (FindLiveObjects: 0.341100 ms CreateObjectMapping: 0.179800 ms MarkObjects: 2.952800 ms  DeleteObjects: 0.035800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
