@@ -991,16 +991,16 @@ RectTransform:
   m_GameObject: {fileID: 871265646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2999998, y: 1.2999998, z: 1.2999998}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 933415186}
   m_Father: {fileID: 2055913524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1237, y: -142.70131}
-  m_SizeDelta: {x: 239.09, y: 49.164}
+  m_AnchoredPosition: {x: 0.12371993, y: -203}
+  m_SizeDelta: {x: 502.4148, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871265648
 MonoBehaviour:
@@ -1167,7 +1167,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ca9c1fdaa0378d342a39d3206aabdaba, type: 3}
-    m_FontSize: 27
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1221,8 +1221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -217.8}
-  m_SizeDelta: {x: 550, y: 600}
+  m_AnchoredPosition: {x: 0.12372, y: -275.54623}
+  m_SizeDelta: {x: 1080.748, y: 863.0925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995752188
 MonoBehaviour:
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 1004886390}
   - component: {fileID: 1004886389}
   m_Layer: 5
-  m_Name: Muisc Volume Text
+  m_Name: Music Volume Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1296,8 +1296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50.7}
+  m_AnchoredPosition: {x: 0.12374, y: 50}
+  m_SizeDelta: {x: 456.3792, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004886389
 MonoBehaviour:
@@ -1321,10 +1321,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ca9c1fdaa0378d342a39d3206aabdaba, type: 3}
-    m_FontSize: 23
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 101
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -1403,8 +1403,8 @@ RectTransform:
   m_GameObject: {fileID: 1128267644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.4999999, z: 1.4999999}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 407824358}
   - {fileID: 1426015829}
@@ -1413,7 +1413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0.12372, y: -37}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128267646
