@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public float damage = 2;
+    public float damage = 3;
     Vector2 rightAttackOffset;
 
     private void Start()
@@ -15,16 +16,14 @@ public class SwordAttack : MonoBehaviour
 
     public void AttackRight()
     {
-        print("atk R");
         swordCollider.enabled = true;
         transform.localPosition = rightAttackOffset;
     }
 
     public void AttackLeft()
     {
-        print("atk L");
         swordCollider.enabled = true;
-        transform.localPosition = new Vector2(rightAttackOffset.x * -1, rightAttackOffset.y);
+        transform.localPosition = new Vector3((rightAttackOffset.x * -1) + 0.06f, rightAttackOffset.y);
     }
 
     public void StopAttack()
@@ -34,7 +33,7 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Enemy")
+        if(other.CompareTag("Enemy"))
         {
             // deal damage to enemy
             Enemy enemy = other.GetComponent<Enemy>();
@@ -42,7 +41,9 @@ public class SwordAttack : MonoBehaviour
             if(enemy != null)
             {
                 enemy.Health -= damage;
+                enemy.isHit();
             }
         }
+    
     }
 }
