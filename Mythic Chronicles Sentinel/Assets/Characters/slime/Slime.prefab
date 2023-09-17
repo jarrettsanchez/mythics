@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6132681755587895283}
   - component: {fileID: 9161735497843042159}
   - component: {fileID: 229475430078127552}
+  - component: {fileID: 3875663705762636331}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -120,9 +121,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.001942493, y: -0.017093949}
-  m_Size: {x: 0.1607156, y: 0.1607156}
-  m_Direction: 0
+  m_Offset: {x: 0.0019424384, y: -0.022289667}
+  m_Size: {x: 0.14235088, y: 0.12495294}
+  m_Direction: 1
 --- !u!50 &-6132681755587895283
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -162,8 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d73b70f549bc438e280a6fd31a377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCollider: {fileID: 3058112586190411734}
-  _health: 3
+  _health: 5
 --- !u!95 &229475430078127552
 Animator:
   serializedVersion: 5
@@ -185,3 +185,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3875663705762636331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417625575548446368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f1111616b41a94d85074c1b6b7845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: -6132681755587895283}
+  moveSpeed: 0.25
