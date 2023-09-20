@@ -21,7 +21,9 @@ public class Enemy : MonoBehaviour
 
             if(_health <= 0)
             {
+                EnemySpawner.onEnemyDestroy.Invoke();
                 isAlive(false);
+                Destroy(gameObject.GetComponent<CapsuleCollider2D>());
             }
         }
         get
