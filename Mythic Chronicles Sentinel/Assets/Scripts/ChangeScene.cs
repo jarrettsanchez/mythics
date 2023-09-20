@@ -10,6 +10,12 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(sceneID);
     }
 
+    public void NewGame()
+    {
+        PlayerPrefs.SetInt("Stage", 1);
+        SceneManager.LoadScene("Stage Title");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

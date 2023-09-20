@@ -22,8 +22,8 @@ public class MusicController : MonoBehaviour
         }
         else
         {
-            volumeSlider.value = 1f;
-            backgroundMusic.volume = 1f;
+            volumeSlider.value = 0.5f;
+            backgroundMusic.volume = 0.5f;
         }
     }
 
