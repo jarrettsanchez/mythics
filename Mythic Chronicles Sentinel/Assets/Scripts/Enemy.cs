@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     Animator animator;
 
+    private bool isDestroyed = false;
+
     public float _health = 5;
 
     public float Health
@@ -19,9 +21,10 @@ public class Enemy : MonoBehaviour
 
             _health = value;
 
-            if(_health <= 0)
+            if(_health <= 0 && !isDestroyed)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                isDestroyed = true;
                 isAlive(false);
                 Destroy(gameObject.GetComponent<CapsuleCollider2D>());
             }

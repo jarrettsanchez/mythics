@@ -8,11 +8,16 @@ public class Defender : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private Transform firingPoint;
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 0.5f;
+    [SerializeField] private float bps = 1f;    // bullets per second
 
     private Transform target;
+    private float timeUntilFire;
+
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
 
@@ -36,7 +41,23 @@ public class Defender : MonoBehaviour
         {
             target = null;
         }
-        
+        else
+        {
+            timeUntilFire += Time.deltaTime;
+
+            if(timeUntilFire >= (1f/bps))
+            {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+    }
+
+    private void Shoot()
+    {
+        GameObject projectileObj = Instantiate(projectilePrefab, firingPoint.position, Quaternion.identity);
+        Projectile projectileScript = projectileObj.GetComponent<Projectile>();
+        projectileScript.SetTarget(target);
     }
 
     private void FindTarget()
