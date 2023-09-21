@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using System;
 
 public class Defender : MonoBehaviour
 {
@@ -88,9 +86,9 @@ public class Defender : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Handles.color = Color.cyan;
+    //    Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    //}
 }

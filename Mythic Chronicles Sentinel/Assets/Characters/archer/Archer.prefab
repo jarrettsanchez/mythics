@@ -43,8 +43,8 @@ GameObject:
   - component: {fileID: 4099116411366999954}
   - component: {fileID: 975207338206362974}
   - component: {fileID: 790021473645606406}
-  - component: {fileID: 1790744973488581408}
   - component: {fileID: 776149332525840653}
+  - component: {fileID: 3239512504100513781}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -186,25 +186,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1790744973488581408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6556724040297996235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba14d071e3d1cc4c8672205c32ede39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 64
-  projectilePrefab: {fileID: 1132138600506833293, guid: 6c1b8cd16e09fbf468b6ef39edb94eed, type: 3}
-  firingPoint: {fileID: 3025464545048242948}
-  targetingRange: 0.5
-  bps: 1
 --- !u!50 &776149332525840653
 Rigidbody2D:
   serializedVersion: 4
@@ -232,3 +213,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3239512504100513781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6556724040297996235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba14d071e3d1cc4c8672205c32ede39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  projectilePrefab: {fileID: 1132138600506833293, guid: 6c1b8cd16e09fbf468b6ef39edb94eed, type: 3}
+  firingPoint: {fileID: 3025464545048242948}
+  targetingRange: 0.5
+  bps: 1

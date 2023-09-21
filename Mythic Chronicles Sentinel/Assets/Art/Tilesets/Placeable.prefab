@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sr: {fileID: 3167717337587848889}
   hoverColor: {r: 0.15897432, g: 0.5943396, b: 0.13176396, a: 0.29411766}
+  restrictColor: {r: 0.5849056, g: 0.2179601, b: 0.2179601, a: 0.29411766}

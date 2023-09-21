@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Attributes")]
+    [SerializeField] private int currencyWorth = 5;
+
     Animator animator;
 
     private bool isDestroyed = false;
@@ -24,6 +27,7 @@ public class Enemy : MonoBehaviour
             if(_health <= 0 && !isDestroyed)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                LevelManager.main.IncreaseCurrency(currencyWorth);
                 isDestroyed = true;
                 isAlive(false);
                 Destroy(gameObject.GetComponent<CapsuleCollider2D>());

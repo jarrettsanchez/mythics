@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d73b70f549bc438e280a6fd31a377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currencyWorth: 1
   _health: 5
 --- !u!95 &229475430078127552
 Animator:
