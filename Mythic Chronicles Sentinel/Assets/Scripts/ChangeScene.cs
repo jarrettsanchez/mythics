@@ -22,4 +22,9 @@ public class ChangeScene : MonoBehaviour
         Debug.Log("Quit");
         PlayerPrefs.SetInt("Music Volume Changed", 0);
     }
+
+    public void Continue()
+    {
+        Time.timeScale = 1;
+    }
 }
