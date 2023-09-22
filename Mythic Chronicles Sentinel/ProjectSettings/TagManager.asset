@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Opening Music
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Projectile
+  - Placeable
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Defenders
+    uniqueID: 3859936065
+    locked: 0
+  - name: Character
+    uniqueID: 1816978923
     locked: 0
