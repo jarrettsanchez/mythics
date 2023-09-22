@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Option Menu.unity
     guid: 27fca89d29d5ca34d8232b2067648890
+  - enabled: 1
+    path: Assets/Scenes/Stage Title.unity
+    guid: ad0ae7a5054db5147a5787aef53ffabe
+  - enabled: 1
+    path: Assets/Scenes/FarmlandsStage1.unity
+    guid: c72cefb4134880c4dbbcb7af4771acf7
   m_configObjects: {}
