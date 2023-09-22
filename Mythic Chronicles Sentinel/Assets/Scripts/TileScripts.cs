@@ -61,11 +61,11 @@ public class TileScripts : MonoBehaviour
         {
             if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedButton != null)
             {
-                if (IsEmpty && !Debug)
+                if (IsEmpty)
                 {
-                   ColorTile(emptyColor);
+                    ColorTile(emptyColor);
                  }
-                if(!IsEmpty && !Debug)
+                if(!IsEmpty)
                 {
                    ColorTile(fullColor);
                 }

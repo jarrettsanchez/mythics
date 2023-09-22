@@ -106,11 +106,11 @@ public class LevelManager : Singleton<LevelManager>
 
     private void SpawnPortals()
     {
-        blueSpawn = new Point(0, 0);
+        blueSpawn = new Point(0, 1);
 
         Instantiate(bluePortalPrefab, Tiles[blueSpawn].GetComponent<TileScripts>().WorldPosition, Quaternion.identity);
 
-        redSpawn = new Point(12, 0);
+        redSpawn = new Point(16, 1);
 
         Instantiate(redPortalPrefab, Tiles[redSpawn].GetComponent<TileScripts>().WorldPosition, Quaternion.identity);
     }

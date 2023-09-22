@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -36,7 +37,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        Currency = 10;
+        Currency = 100;
     }
 
     // Update is called once per frame
@@ -102,5 +103,12 @@ public class GameManager : Singleton<GameManager>
         ClickedButton = null;
 
         Hover.Instance.Deactivate();
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
