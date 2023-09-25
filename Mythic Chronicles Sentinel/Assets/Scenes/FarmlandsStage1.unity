@@ -720,6 +720,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4989286323945943101, guid: 43a40ae352fa2134faede7692c61954f, type: 3}
   m_PrefabInstance: {fileID: 1312439549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &152716892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4913899441300591567, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+  m_PrefabInstance: {fileID: 1000009724}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2720147ba7648e8aea0964bbb9604b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &169525242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4241,8 +4252,9 @@ MonoBehaviour:
   - {fileID: 2417625575548446368, guid: 17b48acc5edfbfa4095afb08231cd32a, type: 3}
   baseEnemies: 5
   enemiesPerSecond: 0.5
-  timeBetweenWaves: 10
+  timeBetweenWaves: 1
   difficultyScalingFactor: 0.75
+  progressBar: {fileID: 152716892}
 --- !u!114 &913459466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,6 +4414,58 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_Value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_MaxValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2655861869191094094, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737942330878329690, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737942330878329690, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_margin.w
+      value: 1.0143576
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737942330878329690, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_margin.x
+      value: 0.1906204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737942330878329690, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_margin.z
+      value: -0.18758394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737942330878329690, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874902870635941601, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 2874902870635941601, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 240.08
+      objectReference: {fileID: 0}
     - target: {fileID: 3252804989886221529, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4486,6 +4550,64 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3897143075122957803, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 33.7507
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897143075122957803, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.9588
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942122904529660280, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_Name
+      value: Progress Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189863534196281912, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189863534196281912, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000019073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189863534196281912, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 255.59998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309839402060048615, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_text
+      value: 'CURRENT WAVE PROGRESS
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309839402060048615, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_fontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309839402060048615, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_margin.w
+      value: 17.861032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309839402060048615, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092583604378872372, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -314
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092583604378872372, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 255.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891744422437002815, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3864
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891744422437002815, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 242.06
+      objectReference: {fileID: 0}
     - target: {fileID: 9011378127955216439, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4495,7 +4617,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7236739700356645909, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d83d0c148c4ff49bf16f432d643cbc, type: 3}
