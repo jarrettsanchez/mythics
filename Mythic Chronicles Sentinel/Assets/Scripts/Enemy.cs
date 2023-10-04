@@ -1,67 +1,67 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Attributes")]
+    [SerializeField] private int currencyWorth = 5;
 
-    [SerializeField] 
-    private float moveSpeed = 0f;
+    Animator animator;
 
-    [SerializeField]
-    private Rigidbody2D rb;
+    private bool isDestroyed = false;
 
-    [SerializeField] 
-    private SpriteRenderer spriteRenderer;
+    public float _health = 5;
 
-    private Transform target;
-    private int pathIndex = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    public float Health
     {
-        target = LevelManager.main.path[pathIndex];
-
-        if (spriteRenderer != null)
+        set
         {
-            spriteRenderer.enabled = false;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Vector2.Distance(target.position,transform.position) <= 0.1f)
-        {
-            pathIndex++;
-           
-            if (pathIndex == LevelManager.main.path.Length)
+            if(value < _health)
             {
-                Destroy(gameObject);
-                return;
+                animator.SetTrigger("isHit");
             }
-            else
+
+            _health = value;
+
+            if(_health <= 0 && !isDestroyed)
             {
-                target = LevelManager.main.path[pathIndex];
-            } 
+                EnemySpawner.onEnemyDestroy.Invoke();
+                LevelManager.main.IncreaseCurrency(currencyWorth);
+                isDestroyed = true;
+                isAlive(false);
+                Destroy(gameObject.GetComponent<CapsuleCollider2D>());
+            }
         }
-    }
-
-    private void FixedUpdate()
-    {
-        Vector2 direction = (target.position - transform.position).normalized;
-
-        rb.velocity = direction * moveSpeed;
-    }
-
-    public void StartMoving()
-    {
-        this.moveSpeed = 2f;
-
-        if (spriteRenderer != null)
+        get
         {
-            spriteRenderer.enabled = true;
+            return _health;
         }
+    }
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        isAlive(true);
+    }
+
+    public void isHit()
+    {
+        animator.SetTrigger("isHit");
+    }
+
+    public void isAlive(bool isAlive)
+    {
+        animator.SetBool("isAlive", isAlive);
+    }
+
+    public void isMoving()
+    {
+        animator.SetTrigger("isMoving");
+    }
+
+    public void RemoveEnemy()
+    {
+        Destroy(gameObject);
     }
 }
