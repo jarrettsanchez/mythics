@@ -5,7 +5,10 @@ using UnityEngine;
 public class DefenderStatus : MonoBehaviour
 {
     [SerializeField]
-    private GameObject statsPanel;
+    private GameObject ArcherstatsPanel;
+
+    [SerializeField]
+    private GameObject SniperstatsPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +22,13 @@ public class DefenderStatus : MonoBehaviour
         
     }
 
-    public void ShowStats()
+    public void ShowArcherStats()
     {
-        statsPanel.SetActive(!statsPanel.activeSelf);
+        ArcherstatsPanel.SetActive(!ArcherstatsPanel.activeSelf);
+    }
+
+    public void ShowSniperStats()
+    {
+        SniperstatsPanel.SetActive(!SniperstatsPanel.activeSelf);
     }
 }
