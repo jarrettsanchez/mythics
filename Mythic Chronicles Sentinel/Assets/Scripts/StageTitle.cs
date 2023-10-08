@@ -2,24 +2,38 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Andre
+
 public class StageTitle : MonoBehaviour
 {
-    public Text titleText;
-    public Animator animator;
+    public Text titleText;    
     private int stageNum;
+    private AudioSource audioSource;    
 
-    // Start is called before the first frame update
     void Start()
     {
-        stageNum = PlayerPrefs.GetInt("Stage");
-        if (stageNum == 1)
-        {
-            titleText.text = "STAGE 1:\nFARMLANDS";
-        }        
+        getAudioSource();
+        setTitleText();
     }
 
-    public void MoveToStage()
+    void MoveToStage()
     {
         SceneManager.LoadScene(stageNum + 2);
+    }
+
+    void getAudioSource()
+    {
+        GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
+        audioSource = musicObject.GetComponent<AudioSource>();
+    }
+
+    void setTitleText()
+    {
+        stageNum = PlayerPrefs.GetInt("Stage");
+        titleText.text = "STAGE " + stageNum + ":\n";
+        if (stageNum >= 1 && stageNum <= 3)
+        {
+            titleText.text = titleText.text + "FARMLANDS";
+        }
     }
 }
