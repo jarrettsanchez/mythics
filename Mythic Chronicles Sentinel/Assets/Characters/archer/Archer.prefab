@@ -175,7 +175,7 @@ Animator:
   m_GameObject: {fileID: 6556724040297996235}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf60338751e7c274ca5d4ae1ba40b920, type: 2}
+  m_Controller: {fileID: 9100000, guid: b2e5450dbf1c19a40bf2302cfcef121b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -231,4 +231,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1132138600506833293, guid: 6c1b8cd16e09fbf468b6ef39edb94eed, type: 3}
   firingPoint: {fileID: 3025464545048242948}
   targetingRange: 0.5
-  bps: 1
+  bps: 0.5

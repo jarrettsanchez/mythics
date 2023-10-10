@@ -18,11 +18,13 @@ public class Defender : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
+    Animator animator;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -85,8 +87,6 @@ public class Defender : MonoBehaviour
             spriteRenderer.flipX = false;
         }
     }
-
-  
 
     //private void OnDrawGizmosSelected()
     //{

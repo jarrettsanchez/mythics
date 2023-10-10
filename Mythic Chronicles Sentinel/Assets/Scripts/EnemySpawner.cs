@@ -19,9 +19,12 @@ public class EnemySpawner : MonoBehaviour
 
     private int currentWave = 1;
     private int enemiesAlive;
+    private int enemiesSlain;
     private int enemiesLeftToSpawn;
     private float timeSinceLastSpawn;
     private bool isSpawning = false;
+
+    public ProgressBar progressBar;
 
     private void Awake()
     {
@@ -53,12 +56,15 @@ public class EnemySpawner : MonoBehaviour
         if(enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
             EndWave();
+            enemiesSlain = 0;
         }
     }
 
     private void EnemyDestroyed()
     {
         enemiesAlive--;
+        enemiesSlain++;
+        progressBar.SetHealth(EnemiesPerWave()-enemiesSlain);
     }
 
     private IEnumerator StartWave()
@@ -66,6 +72,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
+        progressBar.SetMaxHealth(EnemiesPerWave());
     }
 
     private void EndWave()
