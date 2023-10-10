@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 99208537}
   - component: {fileID: 99208536}
   - component: {fileID: 99208535}
+  - component: {fileID: 99208538}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -536,7 +537,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 586799288}
+      - m_Target: {fileID: 99208538}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ShowPausePanel
         m_Mode: 1
@@ -586,6 +587,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99208533}
   m_CullTransparentMesh: 1
+--- !u!114 &99208538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99208533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b52aca88e6801489220189e7d83075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PausePanel: {fileID: 586799283}
 --- !u!4 &99782072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4989286323945943101, guid: 43a40ae352fa2134faede7692c61954f, type: 3}
