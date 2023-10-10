@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 22c2221756efb1d4fa2b1755024798cd
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 5cb3817399bde4940b7fb6f37007349a
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FarmlandsStage1.unity
     guid: c72cefb4134880c4dbbcb7af4771acf7
+  - enabled: 1
+    path: Assets/Scenes/MainGameSceneGUI.unity
+    guid: 8adefbdfa890d45f082d72b988c7e7ec
   m_configObjects: {}
