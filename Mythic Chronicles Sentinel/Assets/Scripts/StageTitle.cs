@@ -24,15 +24,18 @@ public class StageTitle : MonoBehaviour
 
     void Update()
     {
-        if (timer > 0.2 && audioSource.volume >= 0)
+        if (audioSource.volume >= volumeChangeRate)
         {
-            audioSource.volume -= volumeChangeRate;
-            timer = 0;
-        }
-        else
-        {
-            timer += Time.deltaTime;
-        }
+            if (timer > 0.2)
+            {
+                audioSource.volume -= volumeChangeRate;
+                timer = 0;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
+        }        
     }
 
     void MoveToStage()
