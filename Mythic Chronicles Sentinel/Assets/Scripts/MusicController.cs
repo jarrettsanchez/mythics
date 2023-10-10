@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Andre
-
 public class MusicController : MonoBehaviour
 {
     public Slider volumeSlider;
+
     private AudioSource backgroundMusic;
 
     void Start()
     {
-        GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
+        GameObject musicObject = GameObject.FindWithTag("Opening Music");
         backgroundMusic = musicObject.GetComponent<AudioSource>();
 
         if (PlayerPrefs.GetInt("Music Volume Changed") == 1)
@@ -26,6 +25,12 @@ public class MusicController : MonoBehaviour
             volumeSlider.value = 0.5f;
             backgroundMusic.volume = 0.5f;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     public void updateVolume(float volume)

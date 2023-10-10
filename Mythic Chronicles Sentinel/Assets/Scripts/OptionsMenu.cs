@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Andre
-
 public class OptionsMenu : MonoBehaviour
 {
     public Canvas AudioCanvas;

@@ -5,16 +5,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    public float collisionOffset = 0.05f;
-    public ContactFilter2D movementFilter;
+    //public float moveSpeed = 1f;
+    //public float collisionOffset = 0.05f;
+    //public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
 
-    Vector2 movementInput;
+    // Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    //List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     bool canMove = true;
 
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    /*
     private void FixedUpdate()
     {   
         if(canMove)
@@ -63,7 +64,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+*/
 
+    /*
     private bool TryMove(Vector2 direction)
     {
         if(direction != Vector2.zero) {
@@ -91,11 +94,14 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
+*/
 
+/*
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
     }
+*/
 
     void OnFire()
     {
