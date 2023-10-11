@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     //List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
-    bool canMove = true;
+    //bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwordAttack()
     {
-        LockMovement();
+        //LockMovement();
         if(spriteRenderer.flipX == true)
         {
             swordAttack.AttackLeft();
@@ -123,10 +123,11 @@ public class PlayerController : MonoBehaviour
 
     public void StopAttack()
     {
-        UnlockMovement();
+        //UnlockMovement();
         swordAttack.StopAttack();
     }
 
+    /*
     public void LockMovement()
     {
         canMove = false;
@@ -136,4 +137,5 @@ public class PlayerController : MonoBehaviour
     {
         canMove = true;
     }
+    */
 }
