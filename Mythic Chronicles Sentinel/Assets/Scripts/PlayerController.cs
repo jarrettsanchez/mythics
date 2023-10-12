@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour
     //public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
 
-    // Vector2 movementInput;
-    SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
+    //Vector2 movementInput;
+    //SpriteRenderer spriteRenderer;
+    //Rigidbody2D rb;
     Animator animator;
     //List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     /*
@@ -110,15 +110,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwordAttack()
     {
-        //LockMovement();
-        if(spriteRenderer.flipX == true)
-        {
-            swordAttack.AttackLeft();
-        }
-        else
-        {
-            swordAttack.AttackRight();
-        }
+        swordAttack.AttackRight();
     }
 
     public void StopAttack()
