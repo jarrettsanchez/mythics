@@ -45,11 +45,6 @@ public class Enemy : MonoBehaviour, IDamageable
         isAlive(true);
     }
 
-    public void isHit()
-    {
-        animator.SetTrigger("isHit");
-    }
-
     public void isAlive(bool isAlive)
     {
         animator.SetBool("isAlive", isAlive);
@@ -68,5 +63,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public void OnHit(float damage)
     {
         Health -= damage;
+        animator.SetTrigger("isHit");
     }
 }

@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public void SwordAttack()
     {
-        swordAttack.AttackRight();
+        swordAttack.Attack();
     }
 
     public void StopAttack()

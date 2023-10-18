@@ -14,7 +14,7 @@ public class SwordAttack : MonoBehaviour
         attackOffset = transform.position;
     }
 
-    public void AttackRight()
+    public void Attack()
     {
         swordCollider.enabled = true;
         transform.position = attackOffset;
@@ -27,16 +27,17 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        IDamageable damagableObject = other.GetComponent<IDamageable>();
 
         if(other.CompareTag("Enemy"))
         {
-            // deal damage to enemy
-            Enemy enemy = other.GetComponent<Enemy>();
-
-            if(enemy != null)
+            if(damagableObject != null)
             {
-                enemy.Health -= damage;
-                enemy.isHit();
+                damagableObject.OnHit(damage);
+            }
+            else
+            {
+                Debug.LogWarning("Collider does not implement IDamageable.");
             }
         }
     
