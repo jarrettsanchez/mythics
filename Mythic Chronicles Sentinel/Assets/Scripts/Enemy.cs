@@ -10,8 +10,10 @@ public class Enemy : MonoBehaviour, IDamageable
     Animator animator;
 
     private bool isDestroyed = false;
+    private const float MIN_HP = 0.0f;
 
     public float _health = 5;
+    public float damage = 1;
 
     public float Health
     {
@@ -24,13 +26,14 @@ public class Enemy : MonoBehaviour, IDamageable
 
             _health = value;
 
-            if(_health <= 0 && !isDestroyed)
+            // if health reaches/drops below 0 and the game object is not destroyed:
+            if(_health <= MIN_HP && !isDestroyed)
             {
-                EnemySpawner.onEnemyDestroy.Invoke();
-                LevelManager.main.IncreaseCurrency(currencyWorth);
-                isDestroyed = true;
-                isAlive(false);
-                Destroy(gameObject.GetComponent<CapsuleCollider2D>());
+                EnemySpawner.onEnemyDestroy.Invoke();                   // invoke counter functionsn in EnemySpawner
+                LevelManager.main.IncreaseCurrency(currencyWorth);      // increase currency
+                isDestroyed = true;                                     // set destroyed flag to true
+                isAlive(false);                                         // play sprite's death animation
+                Destroy(gameObject.GetComponent<CapsuleCollider2D>());  // destroy enemy's collider
             }
         }
         get
@@ -39,30 +42,45 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
+    // get enemy animator, set isAlive flag to true
     private void Start()
     {
         animator = GetComponent<Animator>();
         isAlive(true);
     }
 
+    // animate sprite to its idle animation
     public void isAlive(bool isAlive)
     {
         animator.SetBool("isAlive", isAlive);
     }
 
+    // animate sprite to its moving animation
     public void isMoving()
     {
         animator.SetTrigger("isMoving");
     }
 
+    // destroys enemy
     public void RemoveEnemy()
     {
         Destroy(gameObject);
     }
 
+    // deal damage to enemy, play damaged enemy animation
     public void OnHit(float damage)
     {
         Health -= damage;
         animator.SetTrigger("isHit");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
+
+        if (damageableObject != null)
+        {
+            damageableObject.OnHit(damage);
+        }
     }
 }
