@@ -1,12 +1,12 @@
 # Mythic Chronicles: Sentinel
 ---
-### What is Mythic Chronicles: Sentinel
+### What is Mythic Chronicles: Sentinel?
 Mythic Chronicles: Sentinel is a 2D game that fuses the genres of Tower Defense and RPG into one.
 
 # Getting Started
 ---
 ### Prerequisites
-- The latest version of Unity which can be downloaded from here. The game is developed and tested using Unity 2022.3.5f1.
+- The latest version of Unity which can be downloaded from [here](https://unity.com/download). The game is developed and tested using Unity 2022.3.5f1.
 - The game is exclusive to PC for now.
 
 ### Building the Project
