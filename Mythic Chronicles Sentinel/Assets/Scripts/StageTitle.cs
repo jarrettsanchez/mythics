@@ -16,8 +16,8 @@ public class StageTitle : MonoBehaviour
     private float volumeChangeRate;
     private float timer = 0;
 
-    void Start()
-    {        
+    void Start() // Checks if the music needs to be changed
+    {
         setTitleText();
         if (PlayerPrefs.GetInt("Change Music") == 1 || stageNum % 3 == 1)
         {
@@ -28,7 +28,7 @@ public class StageTitle : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() // Reduces music volume each frame (if music needs to change)
     {
         if (changeMusic && audioSource.volume >= volumeChangeRate)
         {
@@ -41,33 +41,32 @@ public class StageTitle : MonoBehaviour
             {
                 timer += Time.deltaTime;
             }
-        }        
+        }
     }
 
-    void setTitleText()
+    void setTitleText() // Updates Stage Name Text object
     {
         stageNum = PlayerPrefs.GetInt("Stage");
-        titleText.text = "STAGE " + stageNum + ":\n";
-        string stageName = "";
+        string stageName = "STAGE " + stageNum + ":\n";
         switch (stageNum)
         {
             case 1:
             case 2:
             case 3:
-                stageName = "FARMLANDS";
+                stageName += "FARMLANDS";
                 break;
             case 4:
             case 5:
             case 6:
-                stageName = "FORREST";
+                stageName += "FORREST";
                 break;
             case 7:
             case 8:
             case 9:
-                stageName = "MEADOW";
+                stageName += "MEADOW";
                 break;
         }
-        titleText.text = titleText.text + stageName;
+        titleText.text = stageName;
     }
 
     void getAudioSource()
@@ -76,7 +75,7 @@ public class StageTitle : MonoBehaviour
         audioSource = musicObject.GetComponent<AudioSource>();
     }
 
-    void MoveToStage()
+    void MoveToStage() // Scene transition. Also changes music if necessary.
     {
         SceneManager.LoadScene(stageNum + 2);
         if (changeMusic)
@@ -104,6 +103,6 @@ public class StageTitle : MonoBehaviour
             audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>(musicFile);
             audioSource.volume = currentVolume;
             audioSource.Play();
-        }        
+        }
     }
 }

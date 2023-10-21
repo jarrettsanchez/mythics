@@ -11,6 +11,14 @@ public class Inventory : MonoBehaviour
 
     private bool isInvOpen = true;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            ToggleInventory();
+        }
+    }
+
     public void ToggleInventory()
     {
         isInvOpen = !isInvOpen;
