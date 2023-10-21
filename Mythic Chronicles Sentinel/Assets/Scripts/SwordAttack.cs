@@ -6,24 +6,18 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public float damage = 2;
-    Vector2 rightAttackOffset;
+    public float damage = 2f;
+    Vector2 attackOffset;
 
     private void Start()
     {
-        rightAttackOffset = transform.position;
+        attackOffset = transform.position;
     }
 
     public void AttackRight()
     {
         swordCollider.enabled = true;
-        transform.localPosition = rightAttackOffset;
-    }
-
-    public void AttackLeft()
-    {
-        swordCollider.enabled = true;
-        transform.localPosition = new Vector3((rightAttackOffset.x * -1) + 0.06f, rightAttackOffset.y);
+        transform.position = attackOffset;
     }
 
     public void StopAttack()
@@ -33,6 +27,7 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if(other.CompareTag("Enemy"))
         {
             // deal damage to enemy

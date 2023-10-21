@@ -14,10 +14,16 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(sceneID);
     }
 
+    public void LoadGame()
+    {
+        PlayerPrefs.SetInt("Change Music", 1);
+        SceneManager.LoadScene("Stage Title");
+    }
+
     public void NewGame()
     {
         PlayerPrefs.SetInt("Stage", 1);
-        SceneManager.LoadScene("Stage Title");
+        LoadGame();
     }
 
     public void QuitGame()
