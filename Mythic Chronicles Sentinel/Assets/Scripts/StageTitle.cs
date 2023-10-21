@@ -2,48 +2,72 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using System.Security.Cryptography.X509Certificates;
 
 //Andre
 
 public class StageTitle : MonoBehaviour
 {
-    public Text titleText;    
+    public Text titleText;
+    private bool changeMusic = false;
     private int stageNum;
-    private AudioSource audioSource;    
+    private AudioSource audioSource;
     private float currentVolume;
     private float volumeChangeRate;
     private float timer = 0;
 
     void Start()
-    {
-        getAudioSource();
+    {        
         setTitleText();
-        currentVolume = audioSource.volume;
-        volumeChangeRate = currentVolume / 10;
+        if (PlayerPrefs.GetInt("Change Music") == 1 || stageNum % 3 == 1)
+        {
+            changeMusic = true;
+            getAudioSource();
+            currentVolume = audioSource.volume;
+            volumeChangeRate = currentVolume / 10;
+        }
     }
 
     void Update()
-    {        
-        if (timer > 0.2 && audioSource.volume >= 0)
+    {
+        if (changeMusic && audioSource.volume >= volumeChangeRate)
         {
-            audioSource.volume -= volumeChangeRate;            
-            timer = 0; 
-        }
-        else
-        {
-            timer += Time.deltaTime;            
-        }
+            if (timer > 0.2)
+            {
+                audioSource.volume -= volumeChangeRate;
+                timer = 0;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
+        }        
     }
 
-    void MoveToStage()
+    void setTitleText()
     {
-        SceneManager.LoadScene(stageNum + 2);
-        if (stageNum >= 1 && stageNum <= 3)
+        stageNum = PlayerPrefs.GetInt("Stage");
+        titleText.text = "STAGE " + stageNum + ":\n";
+        string stageName = "";
+        switch (stageNum)
         {
-            audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Music/Suspicious_tool_shop.mp3");
+            case 1:
+            case 2:
+            case 3:
+                stageName = "FARMLANDS";
+                break;
+            case 4:
+            case 5:
+            case 6:
+                stageName = "FORREST";
+                break;
+            case 7:
+            case 8:
+            case 9:
+                stageName = "MEADOW";
+                break;
         }
-        audioSource.volume = currentVolume;
-        audioSource.Play();
+        titleText.text = titleText.text + stageName;
     }
 
     void getAudioSource()
@@ -52,13 +76,34 @@ public class StageTitle : MonoBehaviour
         audioSource = musicObject.GetComponent<AudioSource>();
     }
 
-    void setTitleText()
+    void MoveToStage()
     {
-        stageNum = PlayerPrefs.GetInt("Stage");
-        titleText.text = "STAGE " + stageNum + ":\n";
-        if (stageNum >= 1 && stageNum <= 3)
+        SceneManager.LoadScene(stageNum + 2);
+        if (changeMusic)
         {
-            titleText.text = titleText.text + "FARMLANDS";
-        }
+            PlayerPrefs.SetInt("Change Music", 0);
+            string musicFile = "Assets/Music/";
+            switch (stageNum)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    musicFile += "Suspicious_tool_shop.mp3";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    musicFile += "Aged_Forest.mp3";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    musicFile += "Feel_the_wind.mp3";
+                    break;
+            }
+            audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>(musicFile);
+            audioSource.volume = currentVolume;
+            audioSource.Play();
+        }        
     }
 }

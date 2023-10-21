@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private int [] enemyOrder;
 
     [Header("Attributes")]
     [SerializeField] private int baseEnemies = 5;
@@ -17,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
+    private int currentEnemyIndex = 0;
     private int currentWave = 1;
     private int enemiesAlive;
     private int enemiesSlain;
@@ -53,7 +55,7 @@ public class EnemySpawner : MonoBehaviour
             timeSinceLastSpawn = 0f;
         }
 
-        if(enemiesAlive == 0 && enemiesLeftToSpawn == 0)
+        if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
             EndWave();
             enemiesSlain = 0;
@@ -85,9 +87,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject prefabToSpawn = enemyPrefabs[0];
-        Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        int prefabIndex = enemyOrder[currentEnemyIndex];
+        if (prefabIndex >= 0 && prefabIndex < enemyPrefabs.Length && enemyOrder.Length == baseEnemies)
+        {
+            GameObject prefabToSpawn = enemyPrefabs[prefabIndex];
+            Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        }
+        currentEnemyIndex = (currentEnemyIndex + 1) % enemyOrder.Length;
     }
+
 
     private int EnemiesPerWave()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     [Header("Attributes")]
     [SerializeField] private int currencyWorth = 5;
@@ -63,5 +63,10 @@ public class Enemy : MonoBehaviour
     public void RemoveEnemy()
     {
         Destroy(gameObject);
+    }
+
+    public void OnHit(float damage)
+    {
+        Health -= damage;
     }
 }
