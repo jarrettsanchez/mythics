@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour, IDamageable
     private bool isDestroyed = false;
     private const float MIN_HP = 0.0f;
 
-    public float _health = 5;
-    public float damage = 1;
+    public float _health = 5;   // base HP
+    public float damage = 1;    // base damage to character
 
     public float Health
     {
