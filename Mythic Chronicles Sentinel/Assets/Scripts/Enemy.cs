@@ -67,13 +67,14 @@ public class Enemy : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
 
-    // deal damage to enemy, play damaged enemy animation
+    // deal damage to character, play damaged character animation
     public void OnHit(float damage)
     {
         Health -= damage;
         animator.SetTrigger("isHit");
     }
 
+    // deals damage to character
     private void OnCollisionEnter2D(Collision2D collision)
     {
         IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
@@ -81,6 +82,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (damageableObject != null)
         {
             damageableObject.OnHit(damage);
+
         }
     }
 }
