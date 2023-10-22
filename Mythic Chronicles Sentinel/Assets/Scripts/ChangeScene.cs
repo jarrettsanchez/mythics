@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.SetInt("Stage", 1);
+        PlayerPrefs.SetInt("Stage", 2);
         LoadGame();
     }
 

@@ -5,35 +5,42 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public Button deleteSaveButton;
-    public Canvas AudioCanvas;
+    public Canvas audioCanvas;
+    public Canvas confirmDeleteCanvas;
+    public Button deleteSaveButton;    
     public Slider volumeSlider;
     private AudioSource backgroundMusic;
 
     void Start()
     {
-        hideAudioCanvas();
+        hideCanvas(audioCanvas);
+        hideCanvas(confirmDeleteCanvas);
         hasVolumeChanged();
         if (PlayerPrefs.GetInt("Stage") > 1)
         {
-            deleteSaveButton.enabled = true;
+            deleteSaveButton.interactable = true;
+        }
+        else
+        {
+            deleteSaveButton.interactable = false;
         }
     }
 
-    public void showAudioCanvas()
+    public void showCanvas(Canvas canvas)
     {
-        AudioCanvas.enabled = true;
+        canvas.enabled = true;        
     }
 
-    public void hideAudioCanvas()
+    public void hideCanvas(Canvas canvas)
     {
-        AudioCanvas.enabled = false;
+        canvas.enabled = false;
     }
 
-    public void deleteSave()
+    public void deleteSave(Canvas canvas)
     {
         PlayerPrefs.SetInt("Stage", 1);
-        deleteSaveButton.enabled = false;
+        deleteSaveButton.interactable = false;
+        hideCanvas(canvas);
     }
 
     private void hasVolumeChanged()
