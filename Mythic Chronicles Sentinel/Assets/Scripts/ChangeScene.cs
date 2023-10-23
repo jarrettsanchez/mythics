@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void MoveToScene(int sceneID) 
+    public void MoveToScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);
     }
@@ -18,40 +19,29 @@ public class ChangeScene : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.SetInt("Stage", 1);
+        PlayerPrefs.SetInt("Stage", 2);
         LoadGame();
     }
 
-    public void QuitGame() // Exits app.
+    public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Quit");
     }
 
-    public void ExitStage() // Returns to Main Menu and returns to Main Menu music.
+    public void ExitStage()
     {
         Time.timeScale = 1;
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         AudioSource audioSource = musicObject.GetComponent<AudioSource>();
-        audioSource.clip = Resources.Load<AudioClip>("Fiery_Greatsword");
+        audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Music/Fiery_Greatsword.mp3");
         audioSource.Play();
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void MoveToStage() // Transitions to game stage.
+    public void RestartStage(int sceneID)
     {
         Time.timeScale = 1;
-        int stageNum = PlayerPrefs.GetInt("Stage");
-        string newStage = "";
-        switch (stageNum)
-        {
-            case 1:
-                newStage = "FarmlandsStage1";
-                break;
-            case 2:
-                newStage = "FarmlandsStage2";
-                break;
-        }
-        SceneManager.LoadScene(newStage);
+        MoveToScene(sceneID);
     }
 }

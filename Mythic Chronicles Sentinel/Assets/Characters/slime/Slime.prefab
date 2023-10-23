@@ -165,7 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyWorth: 1
   _health: 5
-  damage: 1
 --- !u!95 &229475430078127552
 Animator:
   serializedVersion: 5

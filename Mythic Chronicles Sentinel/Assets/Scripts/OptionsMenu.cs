@@ -1,16 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 //Andre
 
-public class MusicController : MonoBehaviour
+public class OptionsMenu : MonoBehaviour
 {
+    public Canvas audioCanvas;
+    public Canvas confirmDeleteCanvas;
+    public Button deleteSaveButton;    
     public Slider volumeSlider;
     private AudioSource backgroundMusic;
 
     void Start()
+    {
+        hideCanvas(audioCanvas);
+        hideCanvas(confirmDeleteCanvas);
+        hasVolumeChanged();
+        if (PlayerPrefs.GetInt("Stage") > 1)
+        {
+            deleteSaveButton.interactable = true;
+        }
+        else
+        {
+            deleteSaveButton.interactable = false;
+        }
+    }
+
+    public void showCanvas(Canvas canvas)
+    {
+        canvas.enabled = true;        
+    }
+
+    public void hideCanvas(Canvas canvas)
+    {
+        canvas.enabled = false;
+    }
+
+    public void deleteSave(Canvas canvas)
+    {
+        PlayerPrefs.SetInt("Stage", 1);
+        deleteSaveButton.interactable = false;
+        hideCanvas(canvas);
+    }
+
+    private void hasVolumeChanged()
     {
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         backgroundMusic = musicObject.GetComponent<AudioSource>();
@@ -27,7 +60,6 @@ public class MusicController : MonoBehaviour
             backgroundMusic.volume = 0.5f;
         }
     }
-
     public void updateVolume(float volume)
     {
         backgroundMusic.volume = volume;
