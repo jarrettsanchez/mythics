@@ -866,6 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 2417625575548446368, guid: 17b48acc5edfbfa4095afb08231cd32a, type: 3}
+  enemyOrder: 
   baseEnemies: 5
   enemiesPerSecond: 0.5
   timeBetweenWaves: 1
@@ -5932,9 +5933,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1777261549}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: RestartStage
-        m_Mode: 3
+        m_TargetAssemblyTypeName: ChangeScene, Scripts
+        m_MethodName: MoveToStage
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

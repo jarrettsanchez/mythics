@@ -392,7 +392,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: showCanvas
         m_Mode: 2
         m_Arguments:
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: deleteSave
         m_Mode: 2
         m_Arguments:
@@ -1133,7 +1133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: hideCanvas
         m_Mode: 2
         m_Arguments:
@@ -1194,7 +1194,6 @@ GameObject:
   - component: {fileID: 804837675}
   - component: {fileID: 804837674}
   - component: {fileID: 804837673}
-  - component: {fileID: 804837676}
   m_Layer: 5
   m_Name: Return Button
   m_TagString: Untagged
@@ -1266,8 +1265,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 804837676}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1587331751}
+        m_TargetAssemblyTypeName: ChangeScene, Scripts
         m_MethodName: MoveToScene
         m_Mode: 3
         m_Arguments:
@@ -1316,18 +1315,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804837671}
   m_CullTransparentMesh: 1
---- !u!114 &804837676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804837671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df6825ab649395442a54868413baaef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &871265646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,7 +1412,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: hideCanvas
         m_Mode: 2
         m_Arguments:
@@ -1917,7 +1904,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: MusicController, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: updateVolume
         m_Mode: 0
         m_Arguments:
@@ -2141,6 +2128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1587331749}
   - component: {fileID: 1587331750}
+  - component: {fileID: 1587331751}
   m_Layer: 5
   m_Name: Script Holder
   m_TagString: Untagged
@@ -2176,13 +2164,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587331748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d3fc56410f6a114abb4d9c6821e8a01, type: 3}
+  m_Script: {fileID: 11500000, guid: 052ed546a9780a147b29eaa709c87282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioCanvas: {fileID: 2055913523}
   confirmDeleteCanvas: {fileID: 1814929209}
   deleteSaveButton: {fileID: 39641486}
   volumeSlider: {fileID: 1128267646}
+--- !u!114 &1587331751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587331748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6825ab649395442a54868413baaef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1739601316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,7 +3005,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1587331750}
-        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: showCanvas
         m_Mode: 2
         m_Arguments:

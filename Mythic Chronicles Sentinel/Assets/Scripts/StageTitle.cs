@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using UnityEditor;
 
 //Andre
 
@@ -43,7 +41,7 @@ public class StageTitle : MonoBehaviour
         }
     }
 
-    void setTitleText() // Updates Stage Name Text object
+    private void setTitleText() // Updates Stage Name Text object
     {
         stageNum = PlayerPrefs.GetInt("Stage");
         string stageName = "STAGE " + stageNum + ":\n";
@@ -68,38 +66,44 @@ public class StageTitle : MonoBehaviour
         titleText.text = stageName;
     }
 
-    void getAudioSource()
+    private void getAudioSource()
     {
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         audioSource = musicObject.GetComponent<AudioSource>();
     }
 
-    void MoveToStage() // Scene transition. Also changes music if necessary.
+    public void MoveStageAndChangeMusic() // Stage transition and changes music if necessary.
     {
-        SceneManager.LoadScene(stageNum + 2);
+        ChangeScene changeScene = new ChangeScene();
+        changeScene.MoveToStage();
+        ChangeMusic();
+    }
+
+    private void ChangeMusic() // Changes music if necessary.
+    {
         if (changeMusic)
         {
             PlayerPrefs.SetInt("Change Music", 0);
-            string musicFile = "Assets/Music/";
+            string musicFile = "";
             switch (stageNum)
             {
                 case 1:
                 case 2:
                 case 3:
-                    musicFile += "Suspicious_tool_shop.mp3";
+                    musicFile = "Suspicious_tool_shop";
                     break;
                 case 4:
                 case 5:
                 case 6:
-                    musicFile += "Aged_Forest.mp3";
+                    musicFile = "Aged_Forest";
                     break;
                 case 7:
                 case 8:
                 case 9:
-                    musicFile += "Feel_the_wind.mp3";
+                    musicFile = "Feel_the_wind";
                     break;
             }
-            audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>(musicFile);
+            audioSource.clip = Resources.Load<AudioClip>(musicFile);
             audioSource.volume = currentVolume;
             audioSource.Play();
         }
