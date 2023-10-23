@@ -69,12 +69,6 @@ public class EnemySpawner : MonoBehaviour
             PlayerPrefs.SetInt("Stage", 2);
             SceneManager.LoadScene("Stage Title");
         }
-
-        // end game demo after 13 kills on 2nd wave
-        if (enemiesSlain == 13 && PlayerPrefs.GetInt("Stage") == 2)
-        {
-            SceneManager.LoadScene("Main Menu");
-        }
     }
 
     private void EnemyDestroyed()
