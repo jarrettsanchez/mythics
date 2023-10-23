@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using UnityEditor;
 
 //Andre
 
@@ -43,7 +41,7 @@ public class StageTitle : MonoBehaviour
         }
     }
 
-    void setTitleText() // Updates Stage Name Text object
+    private void setTitleText() // Updates Stage Name Text object
     {
         stageNum = PlayerPrefs.GetInt("Stage");
         string stageName = "STAGE " + stageNum + ":\n";
@@ -68,15 +66,21 @@ public class StageTitle : MonoBehaviour
         titleText.text = stageName;
     }
 
-    void getAudioSource()
+    private void getAudioSource()
     {
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         audioSource = musicObject.GetComponent<AudioSource>();
     }
 
-    void MoveToStage() // Scene transition. Also changes music if necessary.
+    public void MoveStageAndChangeMusic() // Stage transition and changes music if necessary.
     {
-        SceneManager.LoadScene(stageNum + 2);
+        ChangeScene changeScene = new ChangeScene();
+        changeScene.MoveToStage();
+        ChangeMusic();
+    }
+
+    private void ChangeMusic() // Changes music if necessary.
+    {
         if (changeMusic)
         {
             PlayerPrefs.SetInt("Change Music", 0);
