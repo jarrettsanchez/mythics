@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             // if health reaches/drops below 0:
             if (_health <= MIN_HP)
             {
-                // freeze game then switch to game over scene
+                // switch to game over scene
                 SceneManager.LoadScene("GameOver");
             }
         }
