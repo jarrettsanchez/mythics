@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FarmlandsStage1.unity
     guid: c72cefb4134880c4dbbcb7af4771acf7
+  - enabled: 1
+    path: Assets/Scenes/FarmlandsStage2.unity
+    guid: b68c051c3def99842aab30533965643f
   - enabled: 0
     path: Assets/Scenes/MainGameSceneGUI.unity
     guid: 8adefbdfa890d45f082d72b988c7e7ec
