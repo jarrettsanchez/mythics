@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Jarrett
 public class PlayerHealth : MonoBehaviour, IDamageable
@@ -9,9 +10,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private const float MIN_HP = 0.0f;
 
-    public float _health = 10;   // base HP
-
+    public float _health = 10.0f;   // base HP
     public HealthBar healthBar;
+
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             if (_health <= MIN_HP)
             {
                 // freeze game then switch to game over scene
-                Debug.Log("dead");
+                SceneManager.LoadScene("GameOver");
             }
         }
         get
