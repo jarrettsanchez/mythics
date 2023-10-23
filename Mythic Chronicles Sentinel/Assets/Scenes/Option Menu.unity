@@ -1916,8 +1916,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MusicController, Assembly-CSharp
+      - m_Target: {fileID: 1587331750}
+        m_TargetAssemblyTypeName: Options, Scripts
         m_MethodName: updateVolume
         m_Mode: 0
         m_Arguments:
