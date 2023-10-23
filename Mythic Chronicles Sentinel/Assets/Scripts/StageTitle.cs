@@ -80,26 +80,26 @@ public class StageTitle : MonoBehaviour
         if (changeMusic)
         {
             PlayerPrefs.SetInt("Change Music", 0);
-            string musicFile = "Assets/Music/";
+            string musicFile = "";
             switch (stageNum)
             {
                 case 1:
                 case 2:
                 case 3:
-                    musicFile += "Suspicious_tool_shop.mp3";
+                    musicFile = "Suspicious_tool_shop";
                     break;
                 case 4:
                 case 5:
                 case 6:
-                    musicFile += "Aged_Forest.mp3";
+                    musicFile = "Aged_Forest";
                     break;
                 case 7:
                 case 8:
                 case 9:
-                    musicFile += "Feel_the_wind.mp3";
+                    musicFile = "Feel_the_wind";
                     break;
             }
-            audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>(musicFile);
+            audioSource.clip = Resources.Load<AudioClip>(musicFile);
             audioSource.volume = currentVolume;
             audioSource.Play();
         }

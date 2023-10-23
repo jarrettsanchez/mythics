@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
 
     public void NewGame()
     {
-        PlayerPrefs.SetInt("Stage", 2);
+        PlayerPrefs.SetInt("Stage", 1);
         LoadGame();
     }
 
@@ -34,7 +34,7 @@ public class ChangeScene : MonoBehaviour
         Time.timeScale = 1;
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         AudioSource audioSource = musicObject.GetComponent<AudioSource>();
-        audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Music/Fiery_Greatsword.mp3");
+        audioSource.clip = Resources.Load<AudioClip>("Fiery_Greatsword");
         audioSource.Play();
         SceneManager.LoadScene("Main Menu");
     }
