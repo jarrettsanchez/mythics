@@ -46,11 +46,21 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Enemy enemy = other.gameObject.GetComponent<Enemy>();
-        enemy.Health -= projectileDmg;
-        enemy.isHit();
-        Destroy(gameObject);
+        IDamageable damagableObject = other.GetComponent<IDamageable>();
+
+        if (other.CompareTag("Enemy"))
+        {
+            if (damagableObject != null)
+            {
+                damagableObject.OnHit(projectileDmg);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.LogWarning("Collider does not implement IDamageable.");
+            }
+        }
     }
 }
