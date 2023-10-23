@@ -29,11 +29,12 @@ public class Enemy : MonoBehaviour, IDamageable
             // if health reaches/drops below 0 and the game object is not destroyed:
             if(_health <= MIN_HP && !isDestroyed)
             {
-                EnemySpawner.onEnemyDestroy.Invoke();                   // invoke counter functionsn in EnemySpawner
+                Destroy(gameObject.GetComponent<CapsuleCollider2D>());  // destroy enemy's collider
+                EnemySpawner.onEnemyDestroy.Invoke();                   // invoke counter functions in EnemySpawner
                 LevelManager.main.IncreaseCurrency(currencyWorth);      // increase currency
                 isDestroyed = true;                                     // set destroyed flag to true
                 isAlive(false);                                         // play sprite's death animation
-                Destroy(gameObject.GetComponent<CapsuleCollider2D>());  // destroy enemy's collider
+                RemoveEnemy();
             }
         }
         get
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
-    // get enemy animator, set isAlive flag to true
+    // get enemy animator
     private void Start()
     {
         animator = GetComponent<Animator>();
