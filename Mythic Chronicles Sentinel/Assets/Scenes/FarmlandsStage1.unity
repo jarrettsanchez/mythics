@@ -2001,8 +2001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: -101}
-  m_SizeDelta: {x: 58.8362, y: 58.8362}
+  m_AnchoredPosition: {x: -293, y: -58}
+  m_SizeDelta: {x: 145.7399, y: 145.7399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681791266
 MonoBehaviour:
@@ -4325,7 +4325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 2417625575548446368, guid: 17b48acc5edfbfa4095afb08231cd32a, type: 3}
-  enemyOrder: 0000000000000000000000000000000000000000
+  - {fileID: 5726227179452512945, guid: 04f6df7d60979e941b58f3d3d6d61f55, type: 3}
+  enemyOrder: 0000000000000000000000000100000001000000
   baseEnemies: 5
   enemiesPerSecond: 0.5
   timeBetweenWaves: 1
@@ -4728,8 +4729,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.8, y: -1.5}
-  m_SizeDelta: {x: 45.8584, y: 18.8752}
+  m_AnchoredPosition: {x: 3, y: 25}
+  m_SizeDelta: {x: 125.7726, y: 73.6735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038204388
 MonoBehaviour:
@@ -4751,10 +4752,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sniper
+  m_text: 'Name: Sniper
+
+
+    Cost: $4
+
+
+    Range: 1.25
+
+
+    BPS: 0.5'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28368c3ddc5f6e841a7a9551e9fd930a, type: 2}
+  m_sharedMaterial: {fileID: -5611989409237199045, guid: 28368c3ddc5f6e841a7a9551e9fd930a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4778,8 +4788,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5560,8 +5570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361, y: -101.43495}
-  m_SizeDelta: {x: 58.8362, y: 58.8362}
+  m_AnchoredPosition: {x: -317.54816, y: -57.983112}
+  m_SizeDelta: {x: 145.7399, y: 145.7399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245164661
 MonoBehaviour:
@@ -10642,8 +10652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.995, y: -1.7705}
-  m_SizeDelta: {x: 35.99, y: 19.541}
+  m_AnchoredPosition: {x: 4, y: 15}
+  m_SizeDelta: {x: 131.8871, y: 84.411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922141433
 MonoBehaviour:
@@ -10665,10 +10675,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Archer
+  m_text: 'Name: Archer
+
+
+    Cost: $2
+
+
+    Range: 0.5
+
+
+    BPS: 0.5'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 28368c3ddc5f6e841a7a9551e9fd930a, type: 2}
+  m_sharedMaterial: {fileID: -5611989409237199045, guid: 28368c3ddc5f6e841a7a9551e9fd930a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10692,8 +10711,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
