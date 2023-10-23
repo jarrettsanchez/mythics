@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public SwordAttack swordAttack;
+    public float swordCooldownRate = 0.5f;
+    private float counter = 0;
+    private Boolean cooldown = false;    
     Animator animator;
 
     // Start is called before the first frame update
@@ -15,9 +19,26 @@ public class PlayerController : MonoBehaviour
         //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        if (cooldown) // Timer for attack cooldown
+        {
+            counter += Time.deltaTime;
+            if (counter >= swordCooldownRate)
+            {
+                counter = 0;
+                cooldown = false;
+            }
+        }        
+    }
+
     void OnFire()
     {
-        animator.SetTrigger("swordAttack");
+        if (!cooldown)
+        {
+            animator.SetTrigger("swordAttack");
+            cooldown = true;
+        }        
     }
 
     public void SwordAttack()
