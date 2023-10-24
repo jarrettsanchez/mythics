@@ -14,7 +14,7 @@ Mythic Chronicles: Sentinel is a 2D game that fuses the genres of Tower Defense 
 - Start the "Main Menu" scene from the Scenes folder.
 ![image](https://github.com/jarrettsanchez/mythics/assets/133571345/eff124a9-9f33-46f3-8a1c-6462603065e5)
 - Under File -> Build Settings... ensure that the settings are set as shown below:
-![image](https://github.com/jarrettsanchez/mythics/assets/133571345/14c3cb01-efa4-4384-b23b-bd7ba35b925b)
+![image](https://github.com/jarrettsanchez/mythics/assets/133571345/4be72d22-4832-4207-b03e-679be04b5ce6)
 - Build the project, launch from the directory and enjoy the game!
 
 ### Authors
