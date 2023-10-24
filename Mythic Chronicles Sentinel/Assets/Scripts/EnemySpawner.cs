@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWave());
+        progressBar.SetMaxHealth(13);
+        progressBar.SetHealth(0);
     }
 
     private void Update()
@@ -58,7 +61,13 @@ public class EnemySpawner : MonoBehaviour
         if (enemiesAlive == 0 && enemiesLeftToSpawn == 0)
         {
             EndWave();
-            enemiesSlain = 0;
+        }
+
+        // after 2 waves, load into next stage
+        if (enemiesSlain == 13 && PlayerPrefs.GetInt("Stage") == 1)
+        {
+            PlayerPrefs.SetInt("Stage", 2);
+            SceneManager.LoadScene("Stage Title");
         }
     }
 
@@ -66,7 +75,7 @@ public class EnemySpawner : MonoBehaviour
     {
         enemiesAlive--;
         enemiesSlain++;
-        progressBar.SetHealth(EnemiesPerWave()-enemiesSlain);
+        progressBar.SetHealth(enemiesSlain);
     }
 
     private IEnumerator StartWave()
@@ -74,7 +83,6 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
-        progressBar.SetMaxHealth(EnemiesPerWave());
     }
 
     private void EndWave()

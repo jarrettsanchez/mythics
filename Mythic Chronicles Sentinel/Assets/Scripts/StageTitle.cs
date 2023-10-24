@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using UnityEditor;
-using System.Security.Cryptography.X509Certificates;
 
 //Andre
 
@@ -16,8 +13,8 @@ public class StageTitle : MonoBehaviour
     private float volumeChangeRate;
     private float timer = 0;
 
-    void Start()
-    {        
+    void Start() // Checks if the music needs to be changed
+    {
         setTitleText();
         if (PlayerPrefs.GetInt("Change Music") == 1 || stageNum % 3 == 1)
         {
@@ -28,7 +25,7 @@ public class StageTitle : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() // Reduces music volume each frame (if music needs to change)
     {
         if (changeMusic && audioSource.volume >= volumeChangeRate)
         {
@@ -41,69 +38,74 @@ public class StageTitle : MonoBehaviour
             {
                 timer += Time.deltaTime;
             }
-        }        
+        }
     }
 
-    void setTitleText()
+    private void setTitleText() // Updates Stage Name Text object
     {
         stageNum = PlayerPrefs.GetInt("Stage");
-        titleText.text = "STAGE " + stageNum + ":\n";
-        string stageName = "";
+        string stageName = "STAGE " + stageNum + ":\n";
         switch (stageNum)
         {
             case 1:
             case 2:
             case 3:
-                stageName = "FARMLANDS";
+                stageName += "FARMLANDS";
                 break;
             case 4:
             case 5:
             case 6:
-                stageName = "FORREST";
+                stageName += "FORREST";
                 break;
             case 7:
             case 8:
             case 9:
-                stageName = "MEADOW";
+                stageName += "MEADOW";
                 break;
         }
-        titleText.text = titleText.text + stageName;
+        titleText.text = stageName;
     }
 
-    void getAudioSource()
+    private void getAudioSource()
     {
         GameObject musicObject = GameObject.FindWithTag("BackgroundMusic");
         audioSource = musicObject.GetComponent<AudioSource>();
     }
 
-    void MoveToStage()
+    public void MoveStageAndChangeMusic() // Stage transition and changes music if necessary.
     {
-        SceneManager.LoadScene(stageNum + 2);
+        ChangeScene changeScene = new ChangeScene();
+        changeScene.MoveToStage();
+        ChangeMusic();
+    }
+
+    private void ChangeMusic() // Changes music if necessary.
+    {
         if (changeMusic)
         {
             PlayerPrefs.SetInt("Change Music", 0);
-            string musicFile = "Assets/Music/";
+            string musicFile = "";
             switch (stageNum)
             {
                 case 1:
                 case 2:
                 case 3:
-                    musicFile += "Suspicious_tool_shop.mp3";
+                    musicFile = "Suspicious_tool_shop";
                     break;
                 case 4:
                 case 5:
                 case 6:
-                    musicFile += "Aged_Forest.mp3";
+                    musicFile = "Aged_Forest";
                     break;
                 case 7:
                 case 8:
                 case 9:
-                    musicFile += "Feel_the_wind.mp3";
+                    musicFile = "Feel_the_wind";
                     break;
             }
-            audioSource.clip = AssetDatabase.LoadAssetAtPath<AudioClip>(musicFile);
+            audioSource.clip = Resources.Load<AudioClip>(musicFile);
             audioSource.volume = currentVolume;
             audioSource.Play();
-        }        
+        }
     }
 }
